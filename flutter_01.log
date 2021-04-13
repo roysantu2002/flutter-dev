@@ -1,0 +1,82 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter create partysnacks
+
+## exception
+
+FileSystemException: FileSystemException: Exists failed, path = '/Users/santuroy/developer/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_template_images-1.0.1/lib/' (OS Error: Permission denied, errno = 13)
+
+```
+#0      _Directory.existsSync (dart:io/directory_impl.dart:94:7)
+#1      ForwardingFileSystemEntity.existsSync (package:file/src/forwarding/forwarding_file_system_entity.dart:45:33)
+#2      ForwardingFileSystemEntity.existsSync (package:file/src/forwarding/forwarding_file_system_entity.dart:45:33)
+#3      _templateImageDirectory (package:flutter_tools/src/template.dart:304:79)
+<asynchronous suspension>
+#4      Template.fromName (package:flutter_tools/src/template.dart:77:38)
+#5      CreateCommand._renderTemplate (package:flutter_tools/src/commands/create.dart:791:46)
+#6      CreateCommand._generateApp (package:flutter_tools/src/commands/create.dart:671:29)
+#7      CreateCommand.runCommand (package:flutter_tools/src/commands/create.dart:436:37)
+#8      _rootRunUnary (dart:async/zone.dart:1198:47)
+#9      _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#10     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#11     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#12     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#13     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#14     Future._asyncCompleteWithValue.<anonymous closure> (dart:async/future_impl.dart:567:7)
+#15     _rootRun (dart:async/zone.dart:1190:13)
+#16     _CustomZone.run (dart:async/zone.dart:1093:19)
+#17     _CustomZone.runGuarded (dart:async/zone.dart:997:7)
+#18     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1037:23)
+#19     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#20     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#21     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#22     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 1.22.6, on Mac OS X 10.15.7 19H2 darwin-x64, locale en-IN)
+    • Flutter version 1.22.6 at /Users/santuroy/developer/flutter
+    • Framework revision 9b2d32b605 (4 weeks ago), 2021-01-22 14:36:39 -0800
+    • Engine revision 2f0af37152
+    • Dart version 2.10.5
+
+[!] Android toolchain - develop for Android devices (Android SDK version 30.0.1)
+    • Android SDK at /Users/santuroy/Library/Android/sdk
+    • Platform android-30, build-tools 30.0.1
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
+    ! Some Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
+
+[✓] Xcode - develop for iOS and macOS (Xcode 12.0.1)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 12.0.1, Build version 12A7300
+    • CocoaPods version 1.8.4
+
+[✓] Android Studio (version 4.0)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin version 42.1.1
+    • Dart plugin version 191.8593
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
+
+[!] IntelliJ IDEA Ultimate Edition (version 2019.1.2)
+    • IntelliJ at /Applications/IntelliJ IDEA.app
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
+    • For information about installing plugins, see
+      https://flutter.dev/intellij-setup/#installing-the-plugins
+
+[✓] VS Code (version 1.53.2)
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Flutter extension version 3.19.0
+
+[✓] Connected device (2 available)
+    • Android SDK built for x86 (mobile) • emulator-5554                        • android-x86 • Android 10 (API 29) (emulator)
+    • iPhone X (mobile)                  • CD19E646-4807-4B59-84E2-A935626583EA • ios         • com.apple.CoreSimulator.SimRuntime.iOS-12-2 (simulator)
+
+! Doctor found issues in 2 categories.
+```
